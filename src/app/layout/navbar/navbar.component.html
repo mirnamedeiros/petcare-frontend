@@ -1,1 +1,16 @@
-<p>navbar works!</p>
+<nav class="navbar">
+    <div class="navbar-logo">
+        <img ngSrc="assets/images/logo-petcare-nobg.svg" alt="Logo" height="40" width="40">
+        <span class="navbar-brand">PetCare</span>
+    </div>
+    <div class="navbar-items">
+        <ul class="navbar-links">
+            <li><a routerLink="/clients">Clients</a></li>
+            <li><a routerLink="/employees">Employees</a></li>
+            <li><a routerLink="/about">About</a></li>
+        </ul>
+        <div class="navbar-profile">
+            <fa-icon [icon]="faCircleUser" style="font-size: 30px;"></fa-icon>
+        </div>
+    </div>
+</nav>
