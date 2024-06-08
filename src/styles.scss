@@ -1,9 +1,10 @@
 @import "./styles/variables.scss";
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 
 html, body{
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Comfortaa', sans-serif !important;
 }
 
 
@@ -15,4 +16,25 @@ html, body, app-root {
 app-root {
     display: flex;
     flex-direction: column;
+}
+
+nz-calendar-header {
+    display: none !important;
+}
+
+.ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date {
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    margin: 0 !important;
+}
+
+.ant-picker-calendar-full .ant-picker-panel {
+    text-align: left !important;
+}
+
+thead {
+    text-align: center !important;
+}
+
+.ant-picker-content th {
+    color: var(--darker-orange) !important;
 }

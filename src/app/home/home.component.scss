@@ -1,0 +1,29 @@
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+
+.side-content {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+    .secondary-calendar{
+        height: 40%;
+        border: 1px solid var(--darker-orange);
+    }
+
+    .appointments {
+        height: 60%;
+        border: 1px solid var(--darker-orange);
+    }
+}
+
+.main-calendar {
+    width: 70%;
+    margin-left: 1rem;
+}
+
+

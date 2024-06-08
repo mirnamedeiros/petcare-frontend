@@ -5,5 +5,9 @@
     width: 100%;
     height: 60px;
     background-color: var(--green);
-    color: var(--darker-white);
+    color: var(--fade-black);
+
+    p {
+        margin: 0;
+    }
 }
