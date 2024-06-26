@@ -1,0 +1,108 @@
+.login-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--white);
+
+    .background-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background-image: url('/assets/images/login-bg.svg');
+        background-size: cover;
+        background-position: center;
+        z-index: 1; /* Ensure it is above the overlay image */
+    }
+
+    .overlay-image {
+        position: absolute;
+        top: 7%;
+        left: 32%;
+        transform: translateX(-50%);
+        width: 1000px;
+        height: 90%;
+        background-image: url('/assets/images/login-image.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 0; /* Ensure it is below the background */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        margin-right: 10%;
+        z-index: 2;
+        background: transparent;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+
+        .form-image {
+            margin-bottom: 20px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    input {
+        width: 350px;
+        height: 45px;
+        padding: 14px;
+        margin-bottom: 16px;
+        border: none    ;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+
+    input:focus {
+        outline: none;
+        border: 2px solid var(--orange);
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .forgot-pass {
+        align-self: end;
+        text-decoration: none;
+        color: var(--black);
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    button {
+        width: 175px;
+        padding: 10px;
+        background-color: var(--orange);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: var(--darker-orange);
+    }
+
+    button:focus {
+        outline: none;
+    }
+}
