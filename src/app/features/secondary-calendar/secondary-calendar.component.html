@@ -1,0 +1,17 @@
+<div [ngStyle]="{ width: '100%', border: '1px solid #d9d9d9', borderRadius: '4px' }">
+    <nz-calendar
+            [nzFullscreen]="false"
+            [nzValue]="currentDate"
+            [nzCustomHeader]="customHeader"
+            (nzSelectChange)="onValueChange($event)"
+            (nzPanelChange)="onPanelChange($event)"
+    >
+    </nz-calendar>
+</div>
+
+<ng-template #customHeader>
+    <calendar-header
+            [currentMonth]="currentDate"
+            (monthChange)="onMonthChange($event)"
+    ></calendar-header>
+</ng-template>

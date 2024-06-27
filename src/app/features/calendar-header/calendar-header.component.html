@@ -1,0 +1,11 @@
+<div class="calendar-header">
+    <span>{{ currentMonth | date: 'MMMM yyyy' }}</span>
+    <div class="buttons">
+        <button class="left" (click)="prevMonth()">
+            <fa-icon [icon]="faChevronLeft"></fa-icon>
+        </button>
+        <button class="right" (click)="nextMonth()">
+            <fa-icon [icon]="faChevronRight"></fa-icon>
+        </button>
+    </div>
+</div>

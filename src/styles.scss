@@ -18,8 +18,12 @@ app-root {
     flex-direction: column;
 }
 
-nz-calendar-header {
+.main-calendar nz-calendar-header {
     display: none !important;
+}
+
+.secondary-calendar nz-calendar {
+    height: 100%;
 }
 
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date {
@@ -37,4 +41,32 @@ thead {
 
 .ant-picker-content th {
     color: var(--darker-orange) !important;
+}
+
+main-calendar {
+    .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+        background-color: var(--light-orange) !important;
+    }
+
+    .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected .ant-picker-calendar-date .ant-picker-calendar-date-value,
+    .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected .ant-picker-calendar-date-today .ant-picker-calendar-date-value,
+    .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover .ant-picker-calendar-date .ant-picker-calendar-date-value,
+    .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover .ant-picker-calendar-date-today .ant-picker-calendar-date-value,
+    .ant-select-tree-switcher-loading-icon {
+        color: var(--black) !important;
+    }
+}
+
+secondary-calendar {
+    .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+        background-color: var(--green) !important;
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+        border: var(--green) !important;
+    }
 }

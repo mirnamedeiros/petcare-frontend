@@ -2,17 +2,18 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 10rem;
+    padding: 2rem 10rem;
 }
 
 .side-content {
     width: 30%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
 
     .secondary-calendar{
-        height: 40%;
-        border: 1px solid var(--darker-orange);
+        display: flex;
+        justify-content: center;
     }
 
     .appointments {
@@ -25,5 +26,6 @@
     width: 70%;
     margin-left: 1rem;
 }
+
 
 
