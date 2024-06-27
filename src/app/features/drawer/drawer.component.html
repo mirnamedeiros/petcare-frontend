@@ -1,0 +1,50 @@
+<dialog #dialog class="dialog">
+    <button class="close-button" (click)="closeModal()">
+        <fa-icon [icon]="faXmark"></fa-icon>
+    </button>
+    <form class="appointment-form" (ngSubmit)="onSubmit()">
+        <h3 style="margin-bottom: 12px">Schedule an Appointment</h3>
+        <label for="responsibleName">Responsible Name</label>
+        <input type="text" id="responsibleName" name="responsibleName" required>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="petName">Pet Name</label>
+                <input type="text" id="petName" name="petName" required>
+            </div>
+            <div class="form-group">
+                <label for="petAge">Pet Age</label>
+                <input type="number" id="petAge" name="petAge" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="petObservations">Pet Observations</label>
+                <textarea id="petObservations" name="petObservations"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+                <input type="time" id="appointmentTime" name="appointmentTime" required>
+            </div>
+        </div>
+
+        <label for="appointmentType">Type</label>
+        <select id="appointmentType" name="appointmentType" required>
+            <option value="Appointment">Appointment</option>
+            <option value="Emergency">Emergency</option>
+            <option value="Daycare">Daycare</option>
+        </select>
+
+        <label for="employee">Employee</label>
+        <select id="employee" name="employee" required>
+            <option value="Employee 1">Employee 1</option>
+            <option value="Employee 2">Employee 2</option>
+            <option value="Employee 3">Employee 3</option>
+            <option value="Employee 4">Employee 4</option>
+        </select>
+
+        <button type="submit" nz-button nzType="primary">Save</button>
+    </form>
+</dialog>

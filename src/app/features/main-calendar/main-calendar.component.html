@@ -1,8 +1,7 @@
-<!-- main-calendar.component.html -->
 <nz-calendar [nzValue]="currentDate">
     <ul *nzDateCell="let date" class="events">
         <ng-container *ngIf="listDataMap[date.getDate()] as listData">
-            <li *ngFor="let item of listData; trackBy: trackByIndex">
+            <li *ngFor="let item of listData; trackBy: trackByIndex" (click)="openModal()">
                 <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
             </li>
         </ng-container>
@@ -16,3 +15,7 @@
         </ng-container>
     </ng-container>
 </nz-calendar>
+
+<button nz-button nzType="primary" (click)="openModal()">Add Appointment</button>
+
+<drawer #drawerComponent (newAppointment)="handleNewAppointment($event)"></drawer>

@@ -1,0 +1,27 @@
+.appointment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.appointment-content {
+    flex: 1;
+}
+
+.bar-right {
+    width: 10px; /* largura da barra */
+    height: 100%; /* altura da barra */
+    margin-left: 10px; /* margem entre o conteúdo e a barra */
+}
+
+.bar-emergency {
+    background-color: red; /* cor para compromissos de emergência */
+}
+
+.bar-daycare {
+    background-color: orange; /* cor para compromissos de daycare */
+}
+
+.bar-appointment {
+    background-color: green; /* cor para compromissos normais de appointment */
+}

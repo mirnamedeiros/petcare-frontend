@@ -1,19 +1,22 @@
+<!-- home.component.html -->
+
 <!-- NavBar -->
 <app-navbar></app-navbar>
 
 <div class="content">
-    <!-- TODO -->
-     <div class="side-content">
-         <div class="secondary-calendar">
-             <secondary-calendar></secondary-calendar>
-         </div>
-         <div class="appointments">
-             Appointments List
-         </div>
-     </div>
+    <!-- Side Content -->
+    <div class="side-content">
+        <div class="secondary-calendar">
+            <secondary-calendar></secondary-calendar>
+        </div>
+        <div class="appointments">
+            <list-appointments [appointments]="appointments"></list-appointments>
+        </div>
+    </div>
 
+    <!-- Main Calendar -->
     <div class="main-calendar">
-        <main-calendar></main-calendar>
+        <main-calendar (newAppointment)="receiveNewAppointment($event)"></main-calendar>
     </div>
 </div>
 
